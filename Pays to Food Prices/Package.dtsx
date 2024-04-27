@@ -11,8 +11,8 @@
   DTS:LocaleID="1038"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="56"
-  DTS:VersionGUID="{3117F7EA-5826-486C-9A40-AEFA119F87A2}">
+  DTS:VersionBuild="63"
+  DTS:VersionGUID="{C3715354-5B9D-4ECE-BF11-50067773B167}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -48,96 +48,6 @@
               DTS:DTSID="{1BD942E1-95F0-43EE-8CE2-53FEB682FA3C}"
               DTS:CreationName="" />
           </DTS:CacheColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{561E4859-AE91-48AC-A39E-0DBA408E00CE}"
-      DTS:ObjectName="Flat File Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1038"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\kocka\Developer\bi-labor\Pays to Food Prices\data\output.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="5"
-              DTS:TextQualified="True"
-              DTS:ObjectName="PriceFloat"
-              DTS:DTSID="{30078E37-9D59-46A7-8432-E4773894BEF2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="1000"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Country"
-              DTS:DTSID="{2EC647E1-C362-4958-9DEB-53AA73F1AE66}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="1000"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Region"
-              DTS:DTSID="{8B5AB19F-2DD4-4A18-84E0-ED005A74C506}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="1000"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Market"
-              DTS:DTSID="{60440982-F408-4C8A-B164-95F52288DB96}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="1000"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Commodity"
-              DTS:DTSID="{32BC71A1-EC9A-438C-94D2-FB8BB5230463}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="1000"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Currency"
-              DTS:DTSID="{EC858641-C461-4FA5-B3A0-2105482CEC1E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="1000"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Year"
-              DTS:DTSID="{110C167E-73F1-44C5-9DAA-ECD5947FB4B8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="1000"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="MeasurementUnit"
-              DTS:DTSID="{C3797043-C7BA-4C90-9FF8-EB9984ABD110}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -208,6 +118,61 @@
               DTS:TextQualified="True"
               DTS:ObjectName="FloatValue"
               DTS:DTSID="{A28A3F68-682D-419E-BDCC-C53D7BE27616}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager (prices out)]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{BCA14E09-659A-4A21-8977-C1AAD27F3BB5}"
+      DTS:ObjectName="Flat File Connection Manager (prices out)">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1038"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\kocka\Developer\bi-labor\Pays to Food Prices\data\LTSM\prices.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{CF510BCB-4B4F-437E-87B5-7CC35A09B580}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{4AA089DB-1929-49F6-9827-03D9FBFDFA49}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Commodity"
+              DTS:DTSID="{438F33B2-D900-47FF-9848-6E9A5BCBA6EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Price"
+              DTS:DTSID="{99177591-6FB7-424A-BC7D-59539422BF90}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -486,6 +451,61 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager (salaries out)]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FBE9DE9C-0D5A-42BD-BF47-205CA2EA7343}"
+      DTS:ObjectName="Flat File Connection Manager (salaries out)">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1038"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\kocka\Developer\bi-labor\Pays to Food Prices\data\LTSM\salaries.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CountryCode"
+              DTS:DTSID="{98D1948A-8165-4334-9AEC-02BB05CEC9A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CountryName"
+              DTS:DTSID="{0A0CF3AC-F142-4DCB-95FD-7960FF10634A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1000"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{A4CA9F4F-78A2-418B-8C71-2EA15F324D15}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Value"
+              DTS:DTSID="{60BF44F1-C493-4F7A-85B7-30130F02A30E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File rates csv]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{52545801-1BA6-4E4E-92D6-222B492DB6FE}"
@@ -681,6 +701,955 @@
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Export data for LSTM processing (prices)"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0A03976E-4BEE-4CAB-A94A-A2CFAC252723}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Export data for LSTM processing (prices)"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Export data for LSTM processing (prices)\ADO NET Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="ADO NET Source"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."FoodPrices"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\mssqllocaldb.BI_NHF]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\mssqllocaldb.BI_NHF]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Year]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Year]"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Country]"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Region]"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Region]"
+                      name="Region"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Market]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Market]"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Market]"
+                      name="Market"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Commodity]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Commodity]"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Commodity]"
+                      name="Commodity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Price]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Price]"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Price]"
+                      name="Price"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Unit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Unit]"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Unit]"
+                      name="Unit"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Year]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Market]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Market" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Commodity]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Commodity" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Price]"
+                      dataType="r8"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Unit]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Unit" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Year]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Year]"
+                      name="Year" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Country]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Region]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Region]"
+                      name="Region" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Market]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Market]"
+                      name="Market" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Commodity]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Commodity]"
+                      name="Commodity" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Price]"
+                      dataType="r8"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Price]"
+                      name="Price" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Unit]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Unit]"
+                      name="Unit" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Export data for LSTM processing (prices)\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1038"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Export data for LSTM processing (prices)\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager (prices out)]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager (prices out)]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input].Columns[Year]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="Year"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="Country"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input].Columns[Commodity]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="Commodity"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Commodity]"
+                      lineageId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output].Columns[Commodity]" />
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input].Columns[Price]"
+                      cachedDataType="r8"
+                      cachedName="Price"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Price]"
+                      lineageId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output].Columns[Price]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Year]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Commodity]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Commodity" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Price]"
+                      dataType="r8"
+                      name="Price" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Export data for LSTM processing (prices)\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Export data for LSTM processing (prices)\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (prices)\Sort.Inputs[Sort Input].Columns[Year]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="Year"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Year]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (prices)\Sort.Inputs[Sort Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="Country"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Country]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (prices)\Sort.Inputs[Sort Input].Columns[Commodity]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="Commodity"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Commodity]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (prices)\Sort.Inputs[Sort Input].Columns[Price]"
+                      cachedDataType="r8"
+                      cachedName="Price"
+                      lineageId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Price]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output].Columns[Year]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output].Columns[Year]"
+                      name="Year"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Year]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output].Columns[Country]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output].Columns[Country]"
+                      name="Country"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output].Columns[Commodity]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output].Columns[Commodity]"
+                      name="Commodity"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Commodity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output].Columns[Price]"
+                      dataType="r8"
+                      lineageId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output].Columns[Price]"
+                      name="Price">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Price]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Export data for LSTM processing (prices).Paths[ADO NET Source Output]"
+              endId="Package\Export data for LSTM processing (prices)\Sort.Inputs[Sort Input]"
+              name="ADO NET Source Output"
+              startId="Package\Export data for LSTM processing (prices)\ADO NET Source.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Export data for LSTM processing (prices).Paths[Sort Output]"
+              endId="Package\Export data for LSTM processing (prices)\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Sort Output"
+              startId="Package\Export data for LSTM processing (prices)\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Export data for LSTM processing (salaries)"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{69666CFE-0752-41FB-818F-B68CD07FA98E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Export data for LSTM processing (salaries)"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Export data for LSTM processing (salaries)\ADO NET Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="ADO NET Source"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Salaries"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\mssqllocaldb.BI_NHF]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\mssqllocaldb.BI_NHF]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[CountryCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CountryCode]"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[CountryCode]"
+                      name="CountryCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[CountryName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CountryName]"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[CountryName]"
+                      name="CountryName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Year]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Year]"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Value]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Value]"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Value]"
+                      name="Value"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CountryCode]"
+                      dataType="wstr"
+                      length="1000"
+                      name="CountryCode" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CountryName]"
+                      dataType="wstr"
+                      length="1000"
+                      name="CountryName" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Year]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Value]"
+                      dataType="r8"
+                      name="Value" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CountryCode]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CountryCode]"
+                      name="CountryCode" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CountryName]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CountryName]"
+                      name="CountryName" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Year]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Year]"
+                      name="Year" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Value]"
+                      dataType="r8"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Value]"
+                      name="Value" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Export data for LSTM processing (salaries)\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1038"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager (salaries out)]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager (salaries out)]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input].Columns[CountryCode]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="CountryCode"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CountryCode]"
+                      lineageId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output].Columns[CountryCode]" />
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input].Columns[CountryName]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="CountryName"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CountryName]"
+                      lineageId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output].Columns[CountryName]" />
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input].Columns[Year]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="Year"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input].Columns[Value]"
+                      cachedDataType="r8"
+                      cachedName="Value"
+                      externalMetadataColumnId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Value]"
+                      lineageId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output].Columns[Value]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CountryCode]"
+                      dataType="wstr"
+                      length="1000"
+                      name="CountryCode" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CountryName]"
+                      dataType="wstr"
+                      length="1000"
+                      name="CountryName" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Year]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Value]"
+                      dataType="r8"
+                      name="Value" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Export data for LSTM processing (salaries)\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Export data for LSTM processing (salaries)\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Sort.Inputs[Sort Input].Columns[CountryCode]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="CountryCode"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[CountryCode]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Sort.Inputs[Sort Input].Columns[CountryName]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="CountryName"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[CountryName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Sort.Inputs[Sort Input].Columns[Year]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="Year"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Year]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Sort.Inputs[Sort Input].Columns[Value]"
+                      cachedDataType="r8"
+                      cachedName="Value"
+                      lineageId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Value]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output].Columns[CountryCode]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output].Columns[CountryCode]"
+                      name="CountryCode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[CountryCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output].Columns[CountryName]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output].Columns[CountryName]"
+                      name="CountryName"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[CountryName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output].Columns[Year]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output].Columns[Year]"
+                      name="Year"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Year]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output].Columns[Value]"
+                      dataType="r8"
+                      lineageId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output].Columns[Value]"
+                      name="Value">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output].Columns[Value]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Export data for LSTM processing (salaries).Paths[ADO NET Source Output]"
+              endId="Package\Export data for LSTM processing (salaries)\Sort.Inputs[Sort Input]"
+              name="ADO NET Source Output"
+              startId="Package\Export data for LSTM processing (salaries)\ADO NET Source.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Export data for LSTM processing (salaries).Paths[Sort Output]"
+              endId="Package\Export data for LSTM processing (salaries)\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Sort Output"
+              startId="Package\Export data for LSTM processing (salaries)\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\import Prices"
       DTS:CreationName="Microsoft.Pipeline"
@@ -4369,6 +5338,22 @@ where [refTable].[Currency] = ?</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\import Salaries" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{EEF45B14-4837-4725-A7C1-8378323BFE8E}"
+      DTS:From="Package\import Prices"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Export data for LSTM processing (salaries)" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{24FBBC98-988A-420B-9973-DD0975DFDEBF}"
+      DTS:From="Package\Export data for LSTM processing (salaries)"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Export data for LSTM processing (prices)" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -4385,37 +5370,37 @@ where [refTable].[Currency] = ?</property>
         <NodeLayout
           Size="143,42"
           Id="Package\import Prices"
-          TopLeft="157,460" />
+          TopLeft="149,325" />
         <NodeLayout
           Size="181,42"
           Id="Package\import rates to cache"
-          TopLeft="142,269" />
+          TopLeft="131,168" />
         <NodeLayout
           Size="155,42"
           Id="Package\import Salaries"
-          TopLeft="153,371" />
+          TopLeft="145,254" />
         <NodeLayout
           Size="156,42"
           Id="Package\Truncate FoodPrices"
-          TopLeft="150,179" />
+          TopLeft="140,93" />
         <NodeLayout
           Size="165,42"
           Id="Package\Truncate Salaries"
-          TopLeft="145,72" />
+          TopLeft="136,15" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="227.75,114">
+          TopLeft="218.25,57">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,65"
+              EndConnector="0,36"
               Start="0,0"
-              End="0,57.5">
+              End="0,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,57.5" />
+                    End="0,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4426,18 +5411,18 @@ where [refTable].[Currency] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="230.25,221">
+          TopLeft="219.75,135">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48"
+              EndConnector="0,33"
               Start="0,0"
-              End="0,40.5">
+              End="0,25.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.5" />
+                    End="0,25.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4448,18 +5433,18 @@ where [refTable].[Currency] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="229.5,413">
+          TopLeft="221.5,296">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,47"
+              EndConnector="0,29"
               Start="0,0"
-              End="0,39.5">
+              End="0,21.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.5" />
+                    End="0,21.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4470,18 +5455,70 @@ where [refTable].[Currency] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="231.5,311">
+          TopLeft="222,210">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,44"
               Start="0,0"
-              End="0,52.5">
+              End="0,36.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="288,42"
+          Id="Package\Export data for LSTM processing (salaries)"
+          TopLeft="79,405" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="221.75,367">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="279,42"
+          Id="Package\Export data for LSTM processing (prices)"
+          TopLeft="89,477" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="225.75,447">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30"
+              Start="0,0"
+              End="0,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4519,9 +5556,39 @@ where [refTable].[Currency] = ?</property>
           Id="Package\import Prices\Flat File Destination"
           TopLeft="733,250" />
         <NodeLayout
+          Size="99,42"
+          Id="Package\import Prices\Sort"
+          TopLeft="1005,145" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\import Prices\ADO NET Destination"
+          TopLeft="957,254" />
+        <NodeLayout
           Size="158,42"
           Id="Package\import Prices\Derived Column"
           TopLeft="975,41" />
+        <EdgeLayout
+          Id="Package\import Prices.Paths[Sort Output]"
+          TopLeft="1052.25,187">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,67"
+              Start="0,0"
+              End="0,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\import Prices.Paths[Lookup No Match Output]"
           TopLeft="820.25,82">
@@ -4593,6 +5660,28 @@ where [refTable].[Currency] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\import Prices.Paths[Derived Column Output1]"
+          TopLeft="1054.25,83">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62"
+              Start="0,0"
+              End="0,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\import Prices.Paths[Derived Column Output]"
           TopLeft="489,64.5">
           <EdgeLayout.Curve>
@@ -4636,58 +5725,6 @@ where [refTable].[Currency] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="99,42"
-          Id="Package\import Prices\Sort"
-          TopLeft="1005,145" />
-        <EdgeLayout
-          Id="Package\import Prices.Paths[Derived Column Output1]"
-          TopLeft="1054.25,83">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,62"
-              Start="0,0"
-              End="0,54.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="186,42"
-          Id="Package\import Prices\ADO NET Destination"
-          TopLeft="957,254" />
-        <EdgeLayout
-          Id="Package\import Prices.Paths[Sort Output]"
-          TopLeft="1052.25,187">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,67"
-              Start="0,0"
-              End="0,59.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -4701,15 +5738,19 @@ where [refTable].[Currency] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\import Prices\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\import rates to cache">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="165,42"
-          Id="Package\import rates to cache\Flat File Source (rates)"
-          TopLeft="60,60" />
         <NodeLayout
           Size="163,42"
           Id="Package\import rates to cache\Derived Column (Value to float 2)"
@@ -4722,6 +5763,32 @@ where [refTable].[Currency] = ?</property>
           Size="164,42"
           Id="Package\import rates to cache\Cache Transform"
           TopLeft="797,66" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\import rates to cache\Flat File Source (rates)"
+          TopLeft="60,60" />
+        <EdgeLayout
+          Id="Package\import rates to cache.Paths[Sort Output]"
+          TopLeft="671,88">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126,0"
+              Start="0,0"
+              End="118.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="118.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\import rates to cache.Paths[Flat File Source Output]"
           TopLeft="225,82.5">
@@ -4766,28 +5833,6 @@ where [refTable].[Currency] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\import rates to cache.Paths[Sort Output]"
-          TopLeft="671,88">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="126,0"
-              Start="0,0"
-              End="118.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="118.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -4800,6 +5845,10 @@ where [refTable].[Currency] = ?</property>
           Size="167,42"
           Id="Package\import Salaries\Derived Column (Value to float)"
           TopLeft="228,12" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\import Salaries\Sort 1"
+          TopLeft="899,100" />
         <NodeLayout
           Size="156,42"
           Id="Package\import Salaries\Flat File Source (salaries)"
@@ -4817,9 +5866,35 @@ where [refTable].[Currency] = ?</property>
           Id="Package\import Salaries\Sort"
           TopLeft="453,13" />
         <NodeLayout
+          Size="186,42"
+          Id="Package\import Salaries\ADO NET Destination"
+          TopLeft="853,198" />
+        <NodeLayout
           Size="115,42"
           Id="Package\import Salaries\Lookup"
           TopLeft="605,15" />
+        <EdgeLayout
+          Id="Package\import Salaries.Paths[Sort Output1]"
+          TopLeft="949.5,142">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56"
+              Start="0,0"
+              End="0,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\import Salaries.Paths[Sort Output]"
           TopLeft="552,35">
@@ -4913,32 +5988,6 @@ where [refTable].[Currency] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\import Salaries.Paths[Derived Column Output]"
-          TopLeft="395,33.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="58,0"
-              Start="0,0"
-              End="50.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="50.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="108,42"
-          Id="Package\import Salaries\Sort 1"
-          TopLeft="899,100" />
-        <EdgeLayout
           Id="Package\import Salaries.Paths[Derived Column Output1]"
           TopLeft="953,52">
           <EdgeLayout.Curve>
@@ -4960,24 +6009,20 @@ where [refTable].[Currency] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="186,42"
-          Id="Package\import Salaries\ADO NET Destination"
-          TopLeft="853,198" />
         <EdgeLayout
-          Id="Package\import Salaries.Paths[Sort Output1]"
-          TopLeft="949.5,142">
+          Id="Package\import Salaries.Paths[Derived Column Output]"
+          TopLeft="395,33.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,56"
+              EndConnector="58,0"
               Start="0,0"
-              End="0,48.5">
+              End="50.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.5" />
+                    End="50.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4990,6 +6035,14 @@ where [refTable].[Currency] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\import Salaries\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\import Salaries\Lookup">
     <Properties>
       <Property>
@@ -4999,16 +6052,144 @@ where [refTable].[Currency] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Export data for LSTM processing (salaries)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Export data for LSTM processing (salaries)\ADO NET Source"
+          TopLeft="134,97" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Export data for LSTM processing (salaries)\Sort"
+          TopLeft="416,103" />
+        <EdgeLayout
+          Id="Package\Export data for LSTM processing (salaries).Paths[ADO NET Source Output]"
+          TopLeft="300,121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="116,0"
+              Start="0,0"
+              End="108.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="108.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Export data for LSTM processing (salaries)\Flat File Destination"
+          TopLeft="638,105" />
+        <EdgeLayout
+          Id="Package\Export data for LSTM processing (salaries).Paths[Sort Output]"
+          TopLeft="515,125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123,0"
+              Start="0,0"
+              End="115.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="115.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\import Salaries\ADO NET Destination">
+    design-time-name="Package\Export data for LSTM processing (salaries)\ADO NET Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Export data for LSTM processing (prices)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Export data for LSTM processing (prices)\ADO NET Source"
+          TopLeft="122,94" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Export data for LSTM processing (prices)\Sort"
+          TopLeft="422,93" />
+        <EdgeLayout
+          Id="Package\Export data for LSTM processing (prices).Paths[ADO NET Source Output]"
+          TopLeft="288,114.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="134,0"
+              Start="0,0"
+              End="126.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="126.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Export data for LSTM processing (prices)\Flat File Destination"
+          TopLeft="647,96" />
+        <EdgeLayout
+          Id="Package\Export data for LSTM processing (prices).Paths[Sort Output]"
+          TopLeft="521,115.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126,0"
+              Start="0,0"
+              End="118.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="118.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\import Prices\ADO NET Destination">
+    design-time-name="Package\Export data for LSTM processing (prices)\ADO NET Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
