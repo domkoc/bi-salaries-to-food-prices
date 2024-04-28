@@ -11,8 +11,8 @@
   DTS:LocaleID="1038"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="63"
-  DTS:VersionGUID="{C3715354-5B9D-4ECE-BF11-50067773B167}">
+  DTS:VersionBuild="68"
+  DTS:VersionGUID="{FF0A0D0C-5B2E-46E2-9D4C-77229D0E9A9D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -141,30 +141,30 @@
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:MaximumWidth="1000"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Year"
-              DTS:DTSID="{CF510BCB-4B4F-437E-87B5-7CC35A09B580}"
+              DTS:DTSID="{DEB6B8BD-79D0-4E7D-BEDF-F660AAF6F922}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:MaximumWidth="1000"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Country"
-              DTS:DTSID="{4AA089DB-1929-49F6-9827-03D9FBFDFA49}"
+              DTS:DTSID="{8B8FBB5D-9AF2-4DD5-AF22-A67CFFEEFC77}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:MaximumWidth="1000"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Commodity"
-              DTS:DTSID="{438F33B2-D900-47FF-9848-6E9A5BCBA6EB}"
+              DTS:DTSID="{ADE21C08-EA8D-4639-A7C5-F773E5D79EE8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -172,7 +172,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Price"
-              DTS:DTSID="{99177591-6FB7-424A-BC7D-59539422BF90}"
+              DTS:DTSID="{848DFA98-5F98-487D-8331-D89D08BE11D9}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -468,30 +468,30 @@
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:MaximumWidth="1000"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CountryCode"
-              DTS:DTSID="{98D1948A-8165-4334-9AEC-02BB05CEC9A2}"
+              DTS:DTSID="{7E9AE4EC-2344-46BA-A580-B492ACA46267}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:MaximumWidth="1000"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CountryName"
-              DTS:DTSID="{0A0CF3AC-F142-4DCB-95FD-7960FF10634A}"
+              DTS:DTSID="{0520CF0A-F762-4906-80D4-E7A84E324CF2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:MaximumWidth="1000"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Year"
-              DTS:DTSID="{A4CA9F4F-78A2-418B-8C71-2EA15F324D15}"
+              DTS:DTSID="{0E5F3B1C-FAC5-40E8-8954-77E6A2A4E249}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -499,7 +499,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Value"
-              DTS:DTSID="{60BF44F1-C493-4F7A-85B7-30130F02A30E}"
+              DTS:DTSID="{D30A0C0A-BBB3-4998-8D4B-CD61BD0172F3}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -4175,6 +4175,7 @@ where [refTable].[Currency] = ?</property>
                       cachedDataType="str"
                       cachedLength="1000"
                       cachedName="Time"
+                      cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\import Salaries\Flat File (No Rate).Inputs[Flat File Destination Input].ExternalColumns[Time]"
                       lineageId="Package\import Salaries\Sort.Outputs[Sort Output].Columns[Time]" />
                     <inputColumn
@@ -4183,7 +4184,6 @@ where [refTable].[Currency] = ?</property>
                       cachedDataType="str"
                       cachedLength="1000"
                       cachedName="Unit Code"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\import Salaries\Flat File (No Rate).Inputs[Flat File Destination Input].ExternalColumns[Unit Code]"
                       lineageId="Package\import Salaries\Sort.Outputs[Sort Output].Columns[Unit Code]" />
                     <inputColumn
@@ -4206,6 +4206,7 @@ where [refTable].[Currency] = ?</property>
                       cachedDataType="str"
                       cachedLength="1000"
                       cachedName="COUNTRY"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\import Salaries\Flat File (No Rate).Inputs[Flat File Destination Input].ExternalColumns[COUNTRY]"
                       lineageId="Package\import Salaries\Sort.Outputs[Sort Output].Columns[COUNTRY]" />
                     <inputColumn
@@ -4630,7 +4631,6 @@ where [refTable].[Currency] = ?</property>
                       cachedDataType="str"
                       cachedLength="1000"
                       cachedName="Unit Code"
-                      cachedSortKeyPosition="1"
                       lineageId="Package\import Salaries\Sort.Outputs[Sort Output].Columns[Unit Code]">
                       <properties>
                         <property
@@ -4715,7 +4715,7 @@ where [refTable].[Currency] = ?</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
+                  name="EliminateDuplicates">true</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the maximum number of threads to use for sorting."
@@ -4742,7 +4742,7 @@ where [refTable].[Currency] = ?</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -4778,7 +4778,7 @@ where [refTable].[Currency] = ?</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -4796,7 +4796,7 @@ where [refTable].[Currency] = ?</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -4849,7 +4849,8 @@ where [refTable].[Currency] = ?</property>
                       dataType="str"
                       length="1000"
                       lineageId="Package\import Salaries\Sort.Outputs[Sort Output].Columns[COUNTRY]"
-                      name="COUNTRY">
+                      name="COUNTRY"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -4879,7 +4880,8 @@ where [refTable].[Currency] = ?</property>
                       dataType="str"
                       length="1000"
                       lineageId="Package\import Salaries\Sort.Outputs[Sort Output].Columns[Time]"
-                      name="Time">
+                      name="Time"
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -4894,8 +4896,7 @@ where [refTable].[Currency] = ?</property>
                       dataType="str"
                       length="1000"
                       lineageId="Package\import Salaries\Sort.Outputs[Sort Output].Columns[Unit Code]"
-                      name="Unit Code"
-                      sortKeyPosition="1">
+                      name="Unit Code">
                       <properties>
                         <property
                           containsID="true"
@@ -4966,6 +4967,7 @@ where [refTable].[Currency] = ?</property>
                       cachedDataType="str"
                       cachedLength="1000"
                       cachedName="COUNTRY"
+                      cachedSortKeyPosition="1"
                       lineageId="Package\import Salaries\Sort.Outputs[Sort Output].Columns[COUNTRY]">
                       <properties>
                         <property
@@ -5002,6 +5004,7 @@ where [refTable].[Currency] = ?</property>
                       cachedDataType="str"
                       cachedLength="1000"
                       cachedName="Time"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\import Salaries\Sort.Outputs[Sort Output].Columns[Time]">
                       <properties>
                         <property
@@ -5020,7 +5023,6 @@ where [refTable].[Currency] = ?</property>
                       cachedDataType="str"
                       cachedLength="1000"
                       cachedName="Unit Code"
-                      cachedSortKeyPosition="1"
                       lineageId="Package\import Salaries\Sort.Outputs[Sort Output].Columns[Unit Code]">
                       <properties>
                         <property
@@ -5368,6 +5370,14 @@ where [refTable].[Currency] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="279,42"
+          Id="Package\Export data for LSTM processing (prices)"
+          TopLeft="89,477" />
+        <NodeLayout
+          Size="288,42"
+          Id="Package\Export data for LSTM processing (salaries)"
+          TopLeft="79,405" />
+        <NodeLayout
           Size="143,42"
           Id="Package\import Prices"
           TopLeft="149,325" />
@@ -5475,10 +5485,6 @@ where [refTable].[Currency] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="288,42"
-          Id="Package\Export data for LSTM processing (salaries)"
-          TopLeft="79,405" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="221.75,367">
@@ -5501,10 +5507,6 @@ where [refTable].[Currency] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="279,42"
-          Id="Package\Export data for LSTM processing (prices)"
-          TopLeft="89,477" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
           TopLeft="225.75,447">
@@ -5530,6 +5532,154 @@ where [refTable].[Currency] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Export data for LSTM processing (prices)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Export data for LSTM processing (prices)\Sort"
+          TopLeft="422,93" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Export data for LSTM processing (prices)\ADO NET Source"
+          TopLeft="122,94" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Export data for LSTM processing (prices)\Flat File Destination"
+          TopLeft="647,96" />
+        <EdgeLayout
+          Id="Package\Export data for LSTM processing (prices).Paths[Sort Output]"
+          TopLeft="521,115.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126,0"
+              Start="0,0"
+              End="118.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="118.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Export data for LSTM processing (prices).Paths[ADO NET Source Output]"
+          TopLeft="288,114.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="134,0"
+              Start="0,0"
+              End="126.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="126.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Export data for LSTM processing (prices)\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Export data for LSTM processing (salaries)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Export data for LSTM processing (salaries)\Flat File Destination"
+          TopLeft="638,105" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Export data for LSTM processing (salaries)\ADO NET Source"
+          TopLeft="134,97" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Export data for LSTM processing (salaries)\Sort"
+          TopLeft="416,103" />
+        <EdgeLayout
+          Id="Package\Export data for LSTM processing (salaries).Paths[Sort Output]"
+          TopLeft="515,125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123,0"
+              Start="0,0"
+              End="115.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="115.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Export data for LSTM processing (salaries).Paths[ADO NET Source Output]"
+          TopLeft="300,121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="116,0"
+              Start="0,0"
+              End="108.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="108.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Export data for LSTM processing (salaries)\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\import Prices">
     <LayoutInfo>
@@ -5586,7 +5736,9 @@ where [refTable].[Currency] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5656,7 +5808,9 @@ where [refTable].[Currency] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5678,7 +5832,9 @@ where [refTable].[Currency] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5700,7 +5856,9 @@ where [refTable].[Currency] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5722,7 +5880,9 @@ where [refTable].[Currency] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5750,7 +5910,7 @@ where [refTable].[Currency] = ?</property>
     design-time-name="Package\import rates to cache">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="163,42"
           Id="Package\import rates to cache\Derived Column (Value to float 2)"
@@ -5786,7 +5946,9 @@ where [refTable].[Currency] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5808,7 +5970,9 @@ where [refTable].[Currency] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5830,7 +5994,9 @@ where [refTable].[Currency] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5892,7 +6058,9 @@ where [refTable].[Currency] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-20.93556640625,19.44873046875,41.8711328125,9.6025390625"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5914,7 +6082,9 @@ where [refTable].[Currency] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="1.81443359375,5,41.8711328125,9.6025390625"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5937,7 +6107,7 @@ where [refTable].[Currency] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,63.4453125,111.6127734375,11.609375"
+              BoundingBox="-78.42173828125,63.4453125,156.8434765625,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5961,7 +6131,7 @@ where [refTable].[Currency] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="25.05861328125,5,96.3827734375,11.609375"
+              BoundingBox="-0.28673828125001,5,147.0734765625,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5984,7 +6154,9 @@ where [refTable].[Currency] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-2.39345052083333,5,50.2869010416667,9.5732421875"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6006,7 +6178,9 @@ where [refTable].[Currency] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-20.93556640625,15.44873046875,41.8711328125,9.6025390625"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6028,7 +6202,9 @@ where [refTable].[Currency] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0.106549479166667,5,50.2869010416667,9.5732421875"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6049,150 +6225,6 @@ where [refTable].[Currency] = ?</property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
           type="q2:string">false</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Export data for LSTM processing (salaries)">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="166,42"
-          Id="Package\Export data for LSTM processing (salaries)\ADO NET Source"
-          TopLeft="134,97" />
-        <NodeLayout
-          Size="99,42"
-          Id="Package\Export data for LSTM processing (salaries)\Sort"
-          TopLeft="416,103" />
-        <EdgeLayout
-          Id="Package\Export data for LSTM processing (salaries).Paths[ADO NET Source Output]"
-          TopLeft="300,121">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="116,0"
-              Start="0,0"
-              End="108.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="108.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Export data for LSTM processing (salaries)\Flat File Destination"
-          TopLeft="638,105" />
-        <EdgeLayout
-          Id="Package\Export data for LSTM processing (salaries).Paths[Sort Output]"
-          TopLeft="515,125">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="123,0"
-              Start="0,0"
-              End="115.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="115.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Export data for LSTM processing (salaries)\ADO NET Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Export data for LSTM processing (prices)">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="166,42"
-          Id="Package\Export data for LSTM processing (prices)\ADO NET Source"
-          TopLeft="122,94" />
-        <NodeLayout
-          Size="99,42"
-          Id="Package\Export data for LSTM processing (prices)\Sort"
-          TopLeft="422,93" />
-        <EdgeLayout
-          Id="Package\Export data for LSTM processing (prices).Paths[ADO NET Source Output]"
-          TopLeft="288,114.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="134,0"
-              Start="0,0"
-              End="126.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="126.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Export data for LSTM processing (prices)\Flat File Destination"
-          TopLeft="647,96" />
-        <EdgeLayout
-          Id="Package\Export data for LSTM processing (prices).Paths[Sort Output]"
-          TopLeft="521,115.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="126,0"
-              Start="0,0"
-              End="118.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="118.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Export data for LSTM processing (prices)\ADO NET Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
