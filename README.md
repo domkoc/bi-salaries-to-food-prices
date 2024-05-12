@@ -4,4 +4,4 @@
 ## Visualizations:
  - Power BI Desktop
 ## LTSM:
- - [Google colab notebook](https://drive.google.com/file/d/1Dm_H1-2SI9Mz2jPaS8j9iZfeMB47JJh3/view?usp=sharing)
+ - [Google colab notebook](https://colab.research.google.com/drive/117dkGXQOjVGnRBIXR-rE-hnKTc4tSdJ3?usp=sharing)
