@@ -11,8 +11,8 @@
   DTS:LocaleID="1038"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="104"
-  DTS:VersionGUID="{E892EC6E-252D-461E-A421-D1C5E74D1EA2}">
+  DTS:VersionBuild="106"
+  DTS:VersionGUID="{9CE4FE91-841F-436B-B1B8-81373FDB0079}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2732,14 +2732,14 @@ where [refTable].[Currency] = ?</property>
               startId="Package\import Prices\Derived Column.Outputs[Derived Column Output]" />
             <path
               refId="Package\import Prices.Paths[Derived Column Output1]"
-              endId="Package\import Prices\Multicast.Inputs[Multicast Input 1]"
-              name="Derived Column Output"
-              startId="Package\import Prices\Derived Column (Casting).Outputs[Derived Column Output]" />
-            <path
-              refId="Package\import Prices.Paths[Derived Column Output2]"
               endId="Package\import Prices\Flat File Destination (ltsm prices).Inputs[Flat File Destination Input]"
               name="Derived Column Output"
               startId="Package\import Prices\Derived Column (currency 2).Outputs[Derived Column Output]" />
+            <path
+              refId="Package\import Prices.Paths[Derived Column Output2]"
+              endId="Package\import Prices\Multicast.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\import Prices\Derived Column (Casting).Outputs[Derived Column Output]" />
             <path
               refId="Package\import Prices.Paths[Flat File Source Output]"
               endId="Package\import Prices\Derived Column (Casting).Inputs[Derived Column Input]"
@@ -4833,13 +4833,9 @@ where [refTable].[Currency] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="99,42"
-          Id="Package\import Prices\Sort"
-          TopLeft="1005,145" />
-        <NodeLayout
-          Size="204,42"
-          Id="Package\import Prices\Derived Column (Casting)"
-          TopLeft="285,45" />
+          Size="239,42"
+          Id="Package\import Prices\Flat File Destination (ltsm prices)"
+          TopLeft="422,504" />
         <NodeLayout
           Size="130,42"
           Id="Package\import Prices\Aggregate"
@@ -4849,61 +4845,61 @@ where [refTable].[Currency] = ?</property>
           Id="Package\import Prices\Lookup"
           TopLeft="762,40" />
         <NodeLayout
+          Size="219,42"
+          Id="Package\import Prices\Derived Column (currency 2)"
+          TopLeft="438,418" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\import Prices\Lookup (currency 2)"
+          TopLeft="467,336" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\import Prices\Conditional Split (KG data)"
+          TopLeft="439,239" />
+        <NodeLayout
           Size="156,42"
           Id="Package\import Prices\Flat File Source"
           TopLeft="77,44" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\import Prices\Sort"
+          TopLeft="1005,145" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\import Prices\Derived Column"
+          TopLeft="975,41" />
         <NodeLayout
           Size="186,42"
           Id="Package\import Prices\ADO NET Destination"
           TopLeft="957,254" />
         <NodeLayout
-          Size="158,42"
-          Id="Package\import Prices\Derived Column"
-          TopLeft="975,41" />
+          Size="204,42"
+          Id="Package\import Prices\Derived Column (Casting)"
+          TopLeft="285,45" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\import Prices\Multicast"
+          TopLeft="466,142" />
         <EdgeLayout
-          Id="Package\import Prices.Paths[Sort Output]"
-          TopLeft="1052.25,187">
+          Id="Package\import Prices.Paths[Derived Column Output1]"
+          TopLeft="544.5,460">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,67"
+              EndConnector="0,44"
               Start="0,0"
-              End="0,59.5">
+              End="0,36.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,59.5" />
+                    End="0,36.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\import Prices.Paths[Lookup Match Output]"
-          TopLeft="877,61.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="98,0"
-              Start="0,0"
-              End="90.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="90.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-2.94138671875,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4950,58 +4946,20 @@ where [refTable].[Currency] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="123,42"
-          Id="Package\import Prices\Multicast"
-          TopLeft="466,142" />
         <EdgeLayout
-          Id="Package\import Prices.Paths[Flat File Source Output]"
-          TopLeft="233,65.5">
+          Id="Package\import Prices.Paths[Sort Output]"
+          TopLeft="1052.25,187">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="52,0"
+              EndConnector="0,67"
               Start="0,0"
-              End="44.5,0">
+              End="0,59.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="44.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\import Prices.Paths[Derived Column Output1]"
-          TopLeft="387,87">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="121.333333333333,55"
-              Start="0,0"
-              End="121.333333333333,47.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5762439807384" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.5762439807384"
-                    Point2="0,32.5762439807384"
-                    Point3="4,32.5762439807384" />
-                  <mssgle:LineSegment
-                    End="117.333333333333,32.5762439807384" />
-                  <mssgle:CubicBezierSegment
-                    Point1="117.333333333333,32.5762439807384"
-                    Point2="121.333333333333,32.5762439807384"
-                    Point3="121.333333333333,36.5762439807384" />
-                  <mssgle:LineSegment
-                    End="121.333333333333,47.5" />
+                    End="0,59.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5044,10 +5002,6 @@ where [refTable].[Currency] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="209,42"
-          Id="Package\import Prices\Conditional Split (KG data)"
-          TopLeft="439,239" />
         <EdgeLayout
           Id="Package\import Prices.Paths[Multicast Output 2]"
           TopLeft="527.5,184">
@@ -5082,50 +5036,6 @@ where [refTable].[Currency] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\import Prices\Lookup (currency 2)"
-          TopLeft="467,336" />
-        <EdgeLayout
-          Id="Package\import Prices.Paths[KG]"
-          TopLeft="543.5,281">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="12,55"
-              Start="0,0"
-              End="12,47.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.5"
-                    Point2="0,27.5"
-                    Point3="4,27.5" />
-                  <mssgle:LineSegment
-                    End="8,27.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8,27.5"
-                    Point2="12,27.5"
-                    Point3="12,31.5" />
-                  <mssgle:LineSegment
-                    End="12,47.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-0.6694921875,32.5,13.338984375,9.5439453125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="219,42"
-          Id="Package\import Prices\Derived Column (currency 2)"
-          TopLeft="438,418" />
         <EdgeLayout
           Id="Package\import Prices.Paths[Lookup Match Output1]"
           TopLeft="555.5,378">
@@ -5162,24 +5072,114 @@ where [refTable].[Currency] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="239,42"
-          Id="Package\import Prices\Flat File Destination (ltsm prices)"
-          TopLeft="422,504" />
         <EdgeLayout
-          Id="Package\import Prices.Paths[Derived Column Output2]"
-          TopLeft="544.5,460">
+          Id="Package\import Prices.Paths[Lookup Match Output]"
+          TopLeft="877,61.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44"
+              EndConnector="98,0"
               Start="0,0"
-              End="0,36.5">
+              End="90.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.5" />
+                    End="90.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-2.94138671875,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\import Prices.Paths[KG]"
+          TopLeft="543.5,281">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12,55"
+              Start="0,0"
+              End="12,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="4,27.5" />
+                  <mssgle:LineSegment
+                    End="8,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8,27.5"
+                    Point2="12,27.5"
+                    Point3="12,31.5" />
+                  <mssgle:LineSegment
+                    End="12,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-0.6694921875,32.5,13.338984375,9.5439453125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\import Prices.Paths[Flat File Source Output]"
+          TopLeft="233,65.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52,0"
+              Start="0,0"
+              End="44.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="44.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\import Prices.Paths[Derived Column Output2]"
+          TopLeft="387,87">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="121.333333333333,55"
+              Start="0,0"
+              End="121.333333333333,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5762439807384" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5762439807384"
+                    Point2="0,32.5762439807384"
+                    Point3="4,32.5762439807384" />
+                  <mssgle:LineSegment
+                    End="117.333333333333,32.5762439807384" />
+                  <mssgle:CubicBezierSegment
+                    Point1="117.333333333333,32.5762439807384"
+                    Point2="121.333333333333,32.5762439807384"
+                    Point3="121.333333333333,36.5762439807384" />
+                  <mssgle:LineSegment
+                    End="121.333333333333,47.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5191,6 +5191,16 @@ where [refTable].[Currency] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\import Prices\Lookup (currency 2)">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\import Prices\Lookup">
     <Properties>
@@ -5528,16 +5538,6 @@ where [refTable].[Currency] = ?</property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
           type="q2:string">false</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\import Prices\Lookup (currency 2)">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
