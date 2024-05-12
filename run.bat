@@ -1,0 +1,1 @@
+Dtexec /f "C:\Users\kocka\Developer\bi-labor\Pays to Food Prices\Pays to Food Prices\Package.dtsx"
